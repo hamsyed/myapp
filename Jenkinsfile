@@ -1,4 +1,4 @@
-node{
+node('master'){
     stage{'git checkout'}{
     git 'https://github.com/hamsyed/myapp.git'
     }
