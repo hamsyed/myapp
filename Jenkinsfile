@@ -3,7 +3,7 @@ node{
     git 'https://github.com/hamsyed/myapp.git'
     }
     stage('compile-code'){    
-    tool name: 'MAVEN_HOME', type: 'maven'
-    sh 'mvn clean test package'
+    def mvnHOME = tool name: 'MAVEN_HOME', type: 'maven'
+        sh "${mvnHOME}/bin/mvn clean test package"
     }
 }
