@@ -15,4 +15,10 @@ stage('compile and package'){
   //  regards
   //  Hameed''', cc: '', from: 'hameed syed', replyTo: '', subject: 'Jenkin test mail ', to: 'syed.hameed.uddin@gmail.com'
   //   }
+      stage('SonarQube analysis') {
+     def mvn_HOME = tool name: 'maven3', type: 'maven'
+    withSonarQubeEnv('sonar-6') { // If you have configured more than one global server connection, you can specify its name
+      sh "${mvn_HOME}/bin/mvn sonar:sonar"
+    }
+  }
 }     
