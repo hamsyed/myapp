@@ -8,4 +8,10 @@ stage('compile and package'){
      sh "${mvn_HOME}/bin/mvn clean test package"
      
      }
+     
+ stage('Email Notification'){    
+     mail bcc: '', body: '''Hi Welcome to jenkins email alert
+thanks
+hameed''', cc: '', from: '', replyTo: '', subject: 'test-jenkins', to: 'syed.hameed.uddin@gmail.com'
+     }
 }     
