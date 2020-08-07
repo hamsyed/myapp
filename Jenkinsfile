@@ -5,7 +5,7 @@ stage('scm checkout'){
 stage('compile and package'){
     
      def mvn_HOME = tool name: 'maven3', type: 'maven'
-     sh '${mvn_HOME}\bin mvn clean test package'
+     sh "${mvn_HOME}/bin/mvn clean test package"
      
      }
 }     
