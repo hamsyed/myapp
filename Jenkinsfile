@@ -9,10 +9,10 @@ stage('compile and package'){
      
      }
      
- stage('Email Notification'){    
-    mail bcc: '', body: '''Hi,
-    welcome to jenkins -pipeline testing 
-    regards
-    Hameed''', cc: '', from: 'hameed syed', replyTo: '', subject: 'Jenkin test mail ', to: 'syed.hameed.uddin@gmail.com'
-     }
+  //stage('Email Notification'){    
+  //  mail bcc: '', body: '''Hi,
+  //  welcome to jenkins -pipeline testing 
+  //  regards
+  //  Hameed''', cc: '', from: 'hameed syed', replyTo: '', subject: 'Jenkin test mail ', to: 'syed.hameed.uddin@gmail.com'
+  //   }
 }     
