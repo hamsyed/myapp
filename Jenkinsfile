@@ -10,8 +10,11 @@ stage('compile and package'){
      }
      
  stage('Email Notification'){    
-     mail bcc: '', body: '''Hi Welcome to jenkins email alert
-thanks
-hameed''', cc: '', from: '', replyTo: '', subject: 'test-jenkins', to: 'syed.hameed.uddin@gmail.com'
+    mail bcc: '', body: '''Hi,
+
+    welcome to jenkins -pipeline testing 
+
+    regards
+    Hameed''', cc: '', from: 'hameed syed', replyTo: '', subject: 'Jenkin test mail ', to: 'syed.hameed.uddin@gmail.com'
      }
 }     
