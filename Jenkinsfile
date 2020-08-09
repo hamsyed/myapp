@@ -31,6 +31,6 @@ stage("Quality Gate"){
   }
 }
 sshagent(['tomcat-dev']) {
-    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@172.31.33.71:/opt/tomcat8/webapps/'
+    sh 'scp -o StrictHostKeyChecking=no target/*.war root@172.31.33.71:/opt/tomcat8/webapps/'
 }     
 }     
